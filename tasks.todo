@@ -17,4 +17,4 @@
  ✔ Know why Red Head Vs. The Pretty Red Bracelette form Long Stories Short - Bayside is not scrobbled becouse large titles are printed inside div instead span, so I've just relaxed jQuery css selector to get title and It work @done (13-07-01 17:08)
  ✔ Add new style with rebuilds icons @done (13-09-08 17:03)
  ☐ change to not-running when music stops
- ☐ add ex
+ ☐ add browserAction to controll music playback
