@@ -1,0 +1,13 @@
+div#headerSection {
+	height: 128px;
+}
+
+div#headerSection img {
+	float: left;
+}
+div#headerSection h1 {
+	float: left;
+	padding-left: 35px;
+	padding-top: 80px;
+
+}

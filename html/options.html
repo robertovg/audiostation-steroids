@@ -1,12 +1,15 @@
 <!doctype html>
 <html>
 <head>
+	<link rel="shortcut icon" href="../img/favicon.ico">	
 	<title>AudioStation Steroids Options</title>
 	<link href="../css/bootstrap.min.css" rel="stylesheet">	 
+	<link href="../css/style.css" rel="stylesheet">	 
 </head>
 <body>
 	<div class="container">
-		<div class="page-header">
+		<div id="headerSection" class="page-header">
+			<img id="logoImg" src="../img/icon_big.png" alt="Audiostation Steroids Icon" height="128px" width="128px"/>
 			<h1>AudioStation Steroids Options</h1>
 		</div>
         <div id="panel" class="well well-large">
@@ -22,9 +25,9 @@
 			</div>
 			<div id="configForm" class="messagePanel" style="display: none;">
 				<p class="lead">
-					We don't have last.fm permission to make scrobblings jet. 
+					We don't have last.fm permission to make scrobblings yet. 
 					Please click on the button below to authorize AudioStation 
-					Steroids to your account
+					Steroids to your account.
 				</p>
 				<button class="btn btn-success btn-large" type="button">
 					Last.fm authorization	
@@ -32,10 +35,10 @@
 			</div>
 			<div id="upAndRunning" class="messagePanel" style="display: none;">
 				<p class="lead">
-					Congratulations {{userName}}, everithing is up and running!
+					Congratulations {{userName}}, everything is up and running!
 				</p>
 				<button class="btn btn-danger btn-large" type="button">
-					Disallow scrobblings
+					Disallow scrobblings.
 				</button>
 			</div>
 		</div>
@@ -50,6 +53,7 @@
 		<div class="container">
 			<p class="muted credit">
 				Created by <a href="https://twitter.com/robertovg24">@roberto</a>.
+				More info: <a href="http://robertovg.com/side-projects/audiostation-steroids">robertovg.com</a>
 			</p>
 		</div>
 	</div>

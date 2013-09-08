@@ -14,11 +14,11 @@
 			vent.on('Steroids:gotDown', this.getDown, this);
 		},
 		setUpAndRunning: function()	{
-			chrome.browserAction.setIcon({ path: 'img/audio_station_24.png'});
+			chrome.browserAction.setIcon({ path: 'img/icon_running.png'});
 		},
 		getDown: function() {
 			localStorage.clear();
-			chrome.browserAction.setIcon({ path: 'img/audio_station_bn.png'});
+			chrome.browserAction.setIcon({ path: 'img/icon_not_running.png'});
 		}
 	});
 
