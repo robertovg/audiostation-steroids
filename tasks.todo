@@ -1,0 +1,17 @@
+ ✔ Make plugin work when it has already an uuid @done (13-04-19 14:24)
+ ☐ Update config status when is updated
+ ✔ Store uuid on chrome.storage instead of localstorage @done (13-05-08 19:54)
+ ✔ Make extension able to updateNowPlaying @done (13-05-27 21:49)
+ ✔ Make extension able to scrobble @done (13-05-27 21:49)
+ ✔ Take out timesToTry and tries from SteroidsOpt.Models.Config and use the same namespaces @done (13-05-16 19:15)
+ ✔ Split "SteroidsOpt.Models.Config" for using in contentSteroids.js and eventPage.js @done (13-05-16 20:41)
+ ✔ Take care of 510 (Unknown Error) when I'm calling to appfog @done (13-05-28 19:04)
+ ✔ Take care of mini-player ( when you get the same position more than once ) @done (13-05-24 17:14)
+ ☐ Store lost scrobblers and send to server
+ ☐ Start with TDD
+ ✔ When title bigger, polling don't work @done (13-05-28 19:13)
+ ✔ When background page is not ready and I open DSM, ContenteSteroids doesn't work, so take care of that: @done (13-06-20 17:01)
+ ✔ Use an window.onclose event when I close DSM and send Steroids:gotDown event @done (13-06-17 19:27)
+ ✔ Problems with songs longer than 59 min. @done (13-06-08 13:53)
+ ☐ Publish the extension to chrome store and start with it.
+ ✔ Know why Red Head Vs. The Pretty Red Bracelette form Long Stories Short - Bayside is not scrobbled becouse large titles are printed inside div instead span, so I've just relaxed jQuery css selector to get title and It work @done (13-07-01 17:08)

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Title &amp; Meta -->
+    <title>Frontend tests</title>
+    <meta charset="utf-8">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="lib/mocha/mocha.css">
+</head>
+
+<body>
+
+    <div id="mocha"></div>
+
+    <!-- Testing Libraries -->
+    <script src="lib/mocha/mocha.js"></script>
+    <script src="lib/chai/chai.js"></script>
+    <script src="lib/sinon/sinon.js"></script>
+    <script>
+        // Use the expect version of chai assertions - http://chaijs.com/api/bdd
+        chai.should();
+
+        // Tell mocha we want TDD syntax
+        mocha.setup('bdd');
+        var spy = sinon.stub(window.chrome.storage.sync, "get", function() {});
+    </script>
+
+    <!-- Libs -->
+    <script src="../lib/jquery.js"></script>
+    <script src="../lib/underscore.js"></script>
+    <script src="../lib/backbone.js"></script>
+
+    <!-- Source files -->
+    <script src="../src/main.js"></script>
+    <script src="../src/models.js"></script>
+    <script src="../src/contentScript.js"></script>
+    <script src="../src/contentSteroids.js"></script>
+    <script src="../src/eventPage.js"></script>
+    <script src="../src/options.js"></script>
+
+    <!-- Test -->
+    <script src="main.test.js"></script>
+
+    <script>
+        if (window.mochaPhantomJS) {
+            mochaPhantomJS.run(); 
+        }else { 
+            mocha.run();
+        }
+    </script>
+
+</body>
+</html>

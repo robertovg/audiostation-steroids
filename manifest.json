@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+
+  "name": "AudioStation Steroids",
+  "description": "This extension provides Synology DSM AudioStation extra-functionalities such as last.fm integration, shortcut access, etc.",
+  "version": "1.0",
+
+  "icons": { "128": "img/audio_station_72.png" },
+
+  "browser_action": {
+    "default_icon": "img/audio_station_bn.png"
+  },
+  "background": {
+    "scripts": ["lib/jquery.js", "lib/underscore.js", "lib/backbone.js","src/main.js", "src/models.js" ,"src/eventPage.js"],
+    "persistent": false
+  },
+  "content_scripts": [{
+      "matches": ["*://*/*"],      
+      "js": [          
+          "src/contentScript.js"       
+       ],
+       "run_at": "document_end"
+    } 
+  ],
+  "web_accessible_resources": [],
+  "options_page": "html/options.html",
+  "homepage_url": "http://robertovg.com",
+  "permissions": [
+    "*://*/*",
+    "storage"
+  ]
+}
