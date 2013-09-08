@@ -78,9 +78,19 @@
 
 	Steroids.Views.App = Backbone.View.extend({
 		initialize: function() {
+			_self = this;
 			chrome.extension.onMessage.addListener(this.messageRouter);
-
+			chrome.runtime.onInstalled.addListener(this.firstInstalled);
+			chrome.runtime.onSuspend.addListener(function() {
+				vent.trigger("Steroids:gotDown");
+			});
 			vent.on('Steroids:loadScripts', this.loadScripts, this);
+
+		},
+		firstInstalled: function() {
+			if(!_self.model.get('userName')){
+				chrome.tabs.create({url: "html/options.html"});
+			}
 
 		},
 		messageRouter: function(request, sender, sendResponse) {
@@ -167,7 +177,7 @@
 
 	config.fetch().then(function() {
 		new Steroids.Views.Icon();
-		new Steroids.Views.App();
+		new Steroids.Views.App({ model: config });
 		new Steroids.Views.Commiter({ model: config });
 	});
 
