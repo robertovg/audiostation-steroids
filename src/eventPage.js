@@ -80,19 +80,14 @@
 		initialize: function() {
 			_self = this;
 			chrome.extension.onMessage.addListener(this.messageRouter);
-			chrome.runtime.onInstalled.addListener(this.firstInstalled);
-			chrome.runtime.onSuspend.addListener(function() {
-				vent.trigger("Steroids:gotDown");
-			});
-			vent.on('Steroids:loadScripts', this.loadScripts, this);
-
-		},
-		firstInstalled: function() {
+			//When initialize the plugin, if is not configured, then launch configuration.
 			if(!_self.model.get('userName')){
 				chrome.tabs.create({url: "html/options.html"});
+			} else {
+				vent.on('Steroids:loadScripts', this.loadScripts, this);
 			}
-
 		},
+
 		messageRouter: function(request, sender, sendResponse) {
 			switch(request.method){
 				//When it recibes an script with this method requested, it loads these libs
