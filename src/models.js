@@ -14,7 +14,7 @@
 			api_name: "api_key",
 			api_key: "10b508301c48be78f06b0107faa66c4c",
 			lastfm_url: "http://www.last.fm/api/auth/",
-			server_url: "https://steroids-gateway.eu01.aws.af.cm",
+			server_url: "http://steroidsgateway-oghma.rhcloud.com",
 			uuid_key: "uuid",
 			fillUserName: true
 		},
